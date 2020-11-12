@@ -1,0 +1,54 @@
+{% set name = "pdfstream" %}
+{% set version = "0.2.2" %}
+{% set sha256 = "759a435f19c7d8b780a68fd8eff66fa471a7e79d0cc76cab3447c4b618ba8097" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  number: 0
+  noarch: python
+  entry_points:
+    - pdfstream = pdfstream.main:main
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+
+requirements:
+  build:
+    - python >=3.7
+    - pip
+  run:
+    - python >=3.7
+    - bluesky
+    - databroker
+    - fire
+    - numba
+    - pyfai
+    - scikit-beam
+    - suitcase-csv
+    - suitcase-json-metadata
+    - suitcase-tiff
+    - xpdview
+    - xray-vision
+
+test:
+  imports:
+    - pdfstream
+    - pdfstream.integration
+    - pdfstream.transformation
+    - pdfstream.utils
+    - pdfstream.vend
+    - pdfstream.visualization
+  commands:
+    - pdfstream --help
+
+about:
+  home: https://github.com/st3107/pdfstream
+  license: BSD-3-Clause
+  license_family: BSD
+  license_file: LICENSE
+  summary: The data analysis toolbox for the study on pair distribution function (PDF).
