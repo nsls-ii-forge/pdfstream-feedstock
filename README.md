@@ -1,13 +1,17 @@
 About pdfstream
 ===============
 
-Home: https://github.com/st3107/pdfstream
+Home: https://st3107.github.io/pdfstream/
 
 Package license: BSD-3-Clause
 
 Feedstock license: [BSD-3-Clause](https://github.com/nsls-ii-forge/pdfstream-feedstock/blob/master/LICENSE.txt)
 
-Summary: The data analysis toolbox for the study on pair distribution function (PDF).
+Summary: The configs analysis toolbox for the study on pair distribution function (PDF).
+
+Development: https://github.com/st3107/pdfstream/tree/master
+
+Documentation: https://st3107.github.io/pdfstream/
 
 Current build status
 ====================
