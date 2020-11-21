@@ -1,0 +1,5 @@
+channel_sources:
+- defaults
+- nsls2forge
+channel_targets:
+- nsls2forge

@@ -1,0 +1,38 @@
+package:
+  name: pdfstream
+  version: 0.3.0
+source:
+  url: http://github.com/st3107/pdfstream/releases/download/0.3.0/pdfstream-0.3.0.tar.gz
+  sha256: 423bdcabd654f453e771b7f10e6b52e4a0999df82ff06eb69d8555d0cec51a61
+build:
+  noarch: python
+  number: 0
+  script: '{{ PYTHON }} -m pip install . --no-deps -vv'
+requirements:
+  build:
+  - python
+  - setuptools
+  run:
+  - python>=3.7
+  - fire
+  - numba
+  - pyfai
+  - scikit-beam
+  - bluesky
+  - databroker
+  - xpdview
+  - xray-vision
+  - suitcase-csv
+  - suitcase-tiff
+  - suitcase-json-metadata
+test:
+  imports:
+  - pdfstream
+about:
+  home: https://st3107.github.io/pdfstream/
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: The configs analysis toolbox for the study on pair distribution function
+    (PDF).
+  dev_url: https://github.com/st3107/pdfstream/tree/master
+  doc_url: https://st3107.github.io/pdfstream/
