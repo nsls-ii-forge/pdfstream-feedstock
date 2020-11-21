@@ -1,54 +1,38 @@
-{% set name = "pdfstream" %}
-{% set version = "0.2.2" %}
-{% set sha256 = "759a435f19c7d8b780a68fd8eff66fa471a7e79d0cc76cab3447c4b618ba8097" %}
-
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
-
+  name: pdfstream
+  version: 0.3.1
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
-
+  url: http://github.com/st3107/pdfstream/releases/download/0.3.1/pdfstream-0.3.1.tar.gz
+  sha256: 992cc5d22b488c6c680768eff591030082e6404eae9df868034d8bcd5c595641
 build:
-  number: 0
   noarch: python
-  entry_points:
-    - pdfstream = pdfstream.main:main
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
-
+  number: 0
+  script: '{{ PYTHON }} -m pip install . --no-deps -vv'
 requirements:
   build:
-    - python >=3.7
-    - pip
+  - python
+  - setuptools
   run:
-    - python >=3.7
-    - bluesky
-    - databroker
-    - fire
-    - numba
-    - pyfai
-    - scikit-beam
-    - suitcase-csv
-    - suitcase-json-metadata
-    - suitcase-tiff
-    - xpdview
-    - xray-vision
-
+  - python>=3.7
+  - fire
+  - numba
+  - pyfai
+  - scikit-beam
+  - bluesky
+  - databroker
+  - xpdview
+  - xray-vision
+  - suitcase-csv
+  - suitcase-tiff
+  - suitcase-json-metadata
 test:
   imports:
-    - pdfstream
-    - pdfstream.integration
-    - pdfstream.transformation
-    - pdfstream.utils
-    - pdfstream.vend
-    - pdfstream.visualization
-  commands:
-    - pdfstream --help
-
+  - pdfstream
 about:
-  home: https://github.com/st3107/pdfstream
+  home: https://st3107.github.io/pdfstream/
   license: BSD-3-Clause
-  license_family: BSD
   license_file: LICENSE
-  summary: The data analysis toolbox for the study on pair distribution function (PDF).
+  summary: The configs analysis toolbox for the study on pair distribution function
+    (PDF).
+  dev_url: https://github.com/st3107/pdfstream/tree/master
+  doc_url: https://st3107.github.io/pdfstream/
