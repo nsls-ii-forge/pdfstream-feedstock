@@ -46,7 +46,7 @@ test:
     - pdfstream -- --help
 
 about:
-  home: https://github.com/st3107/pdfstream
+  home: https://github.com/{{ org }}/pdfstream
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
