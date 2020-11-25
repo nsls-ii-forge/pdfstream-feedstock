@@ -1,13 +1,14 @@
-{% set name = "pdfstream" %}
+{% set name = "PDFstream" %}
 {% set version = "0.3.2" %}
 {% set sha256 = "191db6aa458d57881c0fad53cb2c540153deaa6e3072ea8c37b91bd88fd68659" %}
+{% set org = "xpdAcq" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/{{ name }}/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
+  url: https://github.com/{{ org }}/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
