@@ -1,7 +1,7 @@
 About pdfstream
 ===============
 
-Home: https://github.com/st3107/pdfstream
+Home: https://github.com/xpdAcq/pdfstream
 
 Package license: BSD-3-Clause
 
