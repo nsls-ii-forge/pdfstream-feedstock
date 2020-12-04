@@ -1,6 +1,6 @@
 {% set name = "PDFstream" %}
-{% set version = "0.3.2" %}
-{% set sha256 = "191db6aa458d57881c0fad53cb2c540153deaa6e3072ea8c37b91bd88fd68659" %}
+{% set version = "0.4.0" %}
+{% set sha256 = "54e4acef9348ffd2e06fece0c4256a1ce2377208bc42a2e488f3e9d9ea99f2b2" %}
 
 package:
   name: {{ name|lower }}
@@ -11,7 +11,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps -vv
 
