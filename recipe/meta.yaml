@@ -1,4 +1,4 @@
-{% set name = "PDFstream" %}
+{% set name = "pdfstream" %}
 {% set version = "0.4.4" %}
 {% set sha256 = "d8a934446020e064171a3142a7e724b75c61ef6044356e96371a7ae1927bddb9" %}
 
